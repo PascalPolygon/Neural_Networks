@@ -72,11 +72,13 @@ def grad_desc(Y, X, W, lrn_rate, epochs):
 
     print("Training (Please don't disturb) ...")
 
-    for iter in range(epochs):
+    for epoch in range(epochs):
         D_w = (2/N)*(np.dot(X_t, (np.dot(X, W)-Y)))
         W = W - np.dot(lrn_rate, D_w)
         # Y_hat = np.dot(X,D_w)
+        print("Epoch: %d" % epoch)
         compute_MSE(Y, np.dot(X, W))
+        print("####################")
 
     print("Training complete!")
 
@@ -95,9 +97,9 @@ def lin_reg(X, Y):
 
     Y_hat = np.dot(X, W)
 
-    Y = np.c_[Y]
+    Y = np.c_[Y]  # convert Y to column vector
     MSE = compute_MSE(Y, Y_hat)
-    grad_desc(Y, X, W, 0.0001, 1000)
+    grad_desc(Y, X, W, 0.01, 10000)
 
 
 dataFile = './dataset/housing_dataset.csv'
