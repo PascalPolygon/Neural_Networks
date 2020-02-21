@@ -1,3 +1,11 @@
+#####################################
+# Mawaba P. Dao
+# ECE5268 (Theory of Neural Networks)
+# Florida Institute of Technology
+# Dr.Anagnostopoulos
+# MP1
+# 02/20/2020
+####################################
 import matplotlib.pyplot as plt
 import numpy as np
 import os
