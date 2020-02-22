@@ -6,7 +6,7 @@ col1 = Array(:,1);
 for i = 2:11
     col2 = Array(:,i);
 
-    scatter(col1, col2);
+    scatter(col2, col1);
     title(strcat(fields{1}," Vs. ",fields{i}));
     xlabel(fields{i})
     ylabel(fields{1})
